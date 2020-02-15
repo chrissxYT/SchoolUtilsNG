@@ -23,6 +23,11 @@ namespace frontend_client
             }
         }
 
+        program[] PROGRAMS =
+        {
+            { @"C:\src", @"Z:\dst", "abc.exe" },
+        };
+
         static void CopyDir(DirectoryInfo src, DirectoryInfo dst)
         {
             foreach (DirectoryInfo dir in src.GetDirectories())
@@ -51,6 +56,7 @@ namespace frontend_client
 
         static void Tick()
         {
+            //Keyboard.IsKeyDown(key)
         }
 
         static void Main(string[] args)
