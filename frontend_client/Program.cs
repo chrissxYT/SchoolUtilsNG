@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace frontend_client
 {
-    class Program
+    static class Program
     {
         struct program
         {
-            public string src;
-            public string dst;
-            public string exe;
+            public string src, dst, exe;
 
             public program(string src, string dst, string exe)
             {
@@ -23,7 +21,7 @@ namespace frontend_client
             }
         }
 
-        program[] PROGRAMS =
+        static program[] PROGRAMS =
         {
             { @"C:\src", @"Z:\dst", "abc.exe" },
         };
@@ -51,7 +49,7 @@ namespace frontend_client
 
         static void Init()
         {
-            CopyPrograms(null);
+            CopyPrograms(PROGRAMS);
         }
 
         static void Tick()
